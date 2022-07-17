@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import Cart from "components/MainLayout/components/Cart";
+// import Cart from "components/MainLayout/components/Cart";
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     homeLink: {
-      color: 'white',
+      color: 'black',
       textDecoration: 'none'
     }
   }),
@@ -43,7 +43,7 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="relative">
+    <AppBar position="relative" color='inherit'>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
           <Link className={classes.homeLink} to="/">My Store!</Link>
@@ -80,7 +80,7 @@ export default function Header() {
             </Menu>
           </div>
         )}
-        <Cart/>
+        {/* <Cart/> */}
       </Toolbar>
     </AppBar>
   );
