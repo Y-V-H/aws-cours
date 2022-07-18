@@ -36,9 +36,11 @@ export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    console.log(111)
+
     axios.get(`${API_PATHS.bff}/products`)
-      .then(res => setProducts(JSON.parse(res.data)));
+      .then(res => {
+        setProducts(res.data)
+      });
   }, [])
 
   return (
