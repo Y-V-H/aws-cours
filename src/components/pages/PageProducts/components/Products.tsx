@@ -39,7 +39,7 @@ export default function Products() {
 
     axios.get(`${API_PATHS.bff}/products`)
       .then(res => {
-        setProducts(res.data.products)
+        setProducts(res.data)
       });
   }, [])
 
