@@ -30,14 +30,14 @@ export default function AddProductToCart({product}: AddProductToCartProps) {
               {cartItem.count}
             </Typography>
             <IconButton onClick={() => dispatch(addToCart(product))}>
-              <Add color={"secondary"}/>
+              <Add color={"inherit"}/>
             </IconButton>
             </>
         )
         :
         (
           <IconButton onClick={() => dispatch(addToCart(product))}>
-            <CartIcon color={"secondary"}/>
+            <CartIcon color={"inherit"}/>
           </IconButton>
         )
     }
